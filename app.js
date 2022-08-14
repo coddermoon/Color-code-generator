@@ -31,8 +31,25 @@ function genarateToastMassage(msg) {
    
     div.innerText = msg;
     document.body.appendChild(div)
+
+    div.addEventListener('click',()=>{
+        div.classList.remove('toast-message-slide-in');
+        div.classList.add('toast-message-slide-out');
+        
+// remove 
+
+div.addEventListener('animationend',()=>{
+    div.remove();
+   
+})
+
+    })
+   
 }
    
+
+// click handler on div;
+
 
   
     
